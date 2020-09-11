@@ -19,5 +19,16 @@ import static java8.mod.pancard.TestUtils.*
 	public void testArrangeAlphanumerics() throws Exception {
 		yakshaAssert(currentTest(), Main.arrangeAlphanumerics("ATR724S3P5").equals("23457TSRPA")?"true":"false",businessTestFile);
 	}
+	
+	@Test
+    public void testExceptionConditon() throws Exception{
+	 yakshaAssert(currentTest(),true,boundaryTestFile);
+      }
+
+	@Test
+	public void testBoundaryCondition() throws Exception {
+	  yakshaAssert(currentTest(),true,exceptionTestFile);
+   }
+
 
 }
